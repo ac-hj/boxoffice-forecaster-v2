@@ -1,8 +1,24 @@
 # Boxoffice Forecaster (Improved version)
 
-As I worked through this project earlier, I was extremely curious why the model was *not* performing well. One speculation that I made was that our data for successful movies was *too* small compared to the unsuccessful movie data that by oversampling, successful movies were becoming misrepresented perhaps. Additionally, after researching PCA is more suitable for categorical columns only.
+As I worked through this project earlier, I wondered why the model was *not* performing well 🤔. One speculation that I made was that our data for successful movies was *too* small compared to the unsuccessful movie data that by oversampling, successful movies were becoming misrepresented potentially. Additionally, I read that PCA is ideal for categorical columns only after researching.
 
-To improve the model, I tried experimenting with the data. I first experimented with sampling, where I tried undersampling and no sampling as well. I also tried experimenting with scaling and dimensionality reduction. As speculated, both undersampling and no sampling improved the performance of the model noticeably. I also saw that not doing dimensionality reduction led to much better performance as well. Given these, I decided to not do any sampling, scaling, or dimensionality reduction. Undersampling and no sampling performed similarly, but no sampling had much less false positive cases, which was better in our context. This is because false positive means predicting a movie to be successful when it won't, which could result in economic loss. This is more significant than false negative because false negative means predicting a movie to be not successful when it would be, which would more likely result in more regrets than economic loss.
+Given these, I wanted to see if I could improve the model by manipulating the sampling methods and reducing the dimensionality.
+
+## Experiment 🧪
+
+### Resampling methods
+1. Undersampling
+2. Oversampling
+3. No sampling
+
+### Scaling and dimensionality reduction 
+1. Scaling only
+2. Scaling only the numerical columns + PCA
+3. Scaling all + PCA
+
+## Conclusion 📊
+
+Surprisingly, both resampling and dimesionality reduction indeed decreased the performance of the model. Given these, I decided to not do any sampling, scaling, or dimensionality reduction for my final model. Undersampling and no sampling performed similarly, but no sampling had much less false positive cases, which was better in our context. This is because false positive means predicting a movie to be successful when it won't, which could result in economic loss. This is more significant than false negative because false negative means predicting a movie to be not successful when it would be, which would likely result in more regrets than economic loss.
 
 Following is the result from the improved model, which is all the same without sampling and dimensionality reduction. 
 
@@ -15,6 +31,16 @@ Following is the result from the improved model, which is all the same without s
 | macro avg | 0.85| 0.70| 0.75| 3161 |
 | weighted avg | 0.93 | 0.93 | 0.93 | 3161 |
 
+Precision-recall curve:
 
-<img width="444" alt="Screen Shot 2021-05-26 at 6 16 47 PM" src="https://user-images.githubusercontent.com/58259611/119750600-8ac7ab80-be4e-11eb-9639-3a08b23da320.png">
-<img width="412" alt="Screen Shot 2021-05-26 at 6 17 07 PM" src="https://user-images.githubusercontent.com/58259611/119750626-961ad700-be4e-11eb-905e-3837456b03b1.png">
+<img width="500" alt="Screen Shot 2021-05-26 at 6 17 07 PM" src="https://user-images.githubusercontent.com/58259611/119750626-961ad700-be4e-11eb-905e-3837456b03b1.png">
+
+As we can see above, the sweet spot for the tradeoff between precision and recall scores is not the best. However, this is a *significant* improvement from the previous model, where the best possible trade off was about 0.1 for precision and 0.8 for recall. This insight is valuable for our data given how imbalanced our data is with the positive class data. This precision-recall curve allows us to focus on the positive class and see how our model performs with this class despite the data imbalance. 
+
+ROC Curve:
+
+<img width="500" alt="Screen Shot 2021-05-26 at 6 16 47 PM" src="https://user-images.githubusercontent.com/58259611/119750600-8ac7ab80-be4e-11eb-9639-3a08b23da320.png">
+
+Compared to our original model before, we can now see a small bump in this graph! This is a good sign since it shows that we can achieve higher True Positive Rate with lower False Positive Rate, and as we have noted, false positive cases are not very good for the purpose of our model. This also shows a significant improvement from our previous model, where our ROC was a straight diagonal line, indicating that FPR increases with the TPR. 
+
+
