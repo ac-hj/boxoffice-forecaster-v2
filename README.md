@@ -1,8 +1,13 @@
-# Boxoffice Forecaster (Improved version)
+# Boxoffice Forecaster (Attempt #2)
 
-As I worked through this project earlier, I wondered why the model was *not* performing well 🤔. One speculation that I made was that our data for successful movies was *too* small compared to the unsuccessful movie data that by oversampling, successful movies were becoming misrepresented potentially. Additionally, I read that PCA is ideal for categorical columns only after researching.
+As I was working on this project earlier, I wondered why the model was *not* performing well. Across different models, there were slight variations in the accuracy, precision, and recall scores, but they were all within the range of 0.5. This was actually a really bad news for as it meant that the model could only predict as well as just randomly guesssing whether or not a movie will be successful. 
 
-Given these, I wanted to see if I could improve the model by manipulating the sampling methods and reducing the dimensionality.
+There are two speculations that I made for this poor performance:
+
+1. Our data for successful movies was *too* small compared to the unsuccessful movie data that by oversampling, successful movies were becoming misrepresented. 
+2. PCA is known to be suitable for categorical features, and our data, which also has numerical features, may not have been the best to apply PCA on.
+
+With these speculations, I wanted to see if I could improve the model by changing the sampling methods and not applying PCA. 
 
 ## Experiment 🧪
 
@@ -11,16 +16,20 @@ Given these, I wanted to see if I could improve the model by manipulating the sa
 2. Oversampling
 3. No sampling
 
+** These resampling method experiments do *not* use scaling or PCA.
+
 ### Scaling and dimensionality reduction 
 1. Scaling only
 2. Scaling only the numerical columns + PCA
 3. Scaling all + PCA
 
+** I added additional experiments for scaling as I wanted to see if scaling the numerical columns separately would change anything.
+
 ## Conclusion 📊
 
-Surprisingly, both resampling and dimesionality reduction indeed decreased the performance of the model. Given these, I decided to not do any sampling, scaling, or dimensionality reduction for my final model. Undersampling and no sampling performed similarly, but no sampling had much less false positive cases, which was better in our context. This is because false positive means predicting a movie to be successful when it won't, which could result in economic loss. This is more significant than false negative because false negative means predicting a movie to be not successful when it would be, which would likely result in more regrets than economic loss.
+Surprisingly, both resampling and dimesionality reduction *decreased* the performance of the model. Scaling did not produce a signficant change and decreased the accuracy very slightly. Given these, I decided to not do any sampling, scaling, or dimensionality reduction for my final model. Undersampling and no sampling performed similarly, but no sampling had much less false positive cases, which is better in our context. This is because false positive means predicting a movie to be successful when it won't, which could result in an economic loss (like investment). This is more significant than false negatives because false negative means predicting a movie to be not successful when it would be, which would likely result in more regrets than economic loss.
 
-Following is the result from the improved model, which is all the same without sampling and dimensionality reduction. 
+Following is the result from the improved model, which is all the same as the original model but without sampling, scaling, and dimensionality reduction. 
 
 
 |   | precision | recall | f1-score | support |
@@ -41,6 +50,6 @@ ROC Curve:
 
 <img width="500" alt="Screen Shot 2021-05-26 at 6 16 47 PM" src="https://user-images.githubusercontent.com/58259611/119750600-8ac7ab80-be4e-11eb-9639-3a08b23da320.png">
 
-Compared to our original model before, we can now see a small bump in this graph! This is a good sign since it shows that we can achieve higher True Positive Rate with lower False Positive Rate, and as we have noted, false positive cases are not very good for the purpose of our model. This also shows a significant improvement from our previous model, where our ROC was a straight diagonal line, indicating that FPR increases with the TPR. 
+Compared to our original model before, we can now see a small bump in this graph! This is a good sign since it shows that we can achieve higher True Positive Rate with lower False Positive Rate, and as we have noted, false positive cases are not very good for the purpose of our model. This also shows a significant improvement from our previous model, where our ROC was a straight diagonal line, where the FPR was increasing at the same rate as the TPR. 
 
 
