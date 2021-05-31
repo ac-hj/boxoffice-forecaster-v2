@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    /* display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; */
+    width: 20vw;
+  }
+
+/* input, select {
+    display: block;
+} */
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+}

@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Box Office Forecaster</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+    </head>
+    <body style="background-color:#EFEFF0">
+        <div>
+            <h1>Box Office Forecaster</h1>
+            <form action="/getprediction" method="post">
+                <div class="form-group">
+                  <label for="titleInput">Enter Title: </label>
+                  <br>
+                  <input type="text" name="title" autocomplete="off" placeholder="Title">
+                </div>
+                <div class="form-group">
+                  <label for="durationInput">Enter Duration (in minutes): </label>
+                  <br>
+                  <input type="number" name="duration" autocomplete="off" placeholder="Duration">
+                </div>
+                <div class="form-group">
+                    <label for="genreInput">Enter Genre(s) (separated by commas): </label>
+                    <br>
+                    <input type="text" name="genre" autocomplete="off" placeholder="Genre(s)">
+                </div>
+                <div class="form-group">
+                    <label for="actorInput">Enter Actor(s) (separated by commas): </label>
+                    <br>
+                    <input type="text" name="actor" autocomplete="off" placeholder="Actor(s)">
+                </div>
+                <div class="form-group">
+                    <label for="directorInput">Enter Director(s) (separated by commas): </label>
+                    <br>
+                    <input type="text" name="director" autocomplete="off" placeholder="Director(s)">
+                </div>
+                <div class="form-group">
+                    <label for="companyInput">Enter Company(s) (separated by commas): </label>
+                    <br>
+                    <input type="text" name="company" autocomplete="off" placeholder="Company">
+                </div>
+                <div class="form-group">
+                    <label for="dateInput">Published Date: </label>
+                    <br>
+                    <input type="date" name="date" autocomplete="off" placeholder="Date">
+                </div>
+                <div class="form-group">
+                    <label for="descInput">Description: </label>
+                    <br>
+                    <input type="text" name="desc" autocomplete="off" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <label for="contInput">Continent: </label>
+                    <br>
+                    <select name="continent" autocomplete="off" placeholder="Continent">
+                        <option>Africa</option>
+                        <option>Asia</option>
+                        <option>Australia</option>
+                        <option>Europe</option>
+                        <option>North America</option>
+                        <option>South America</option>
+                        <option>other</option>
+                    </select>
+                </div>
+                <input type="submit" class="btn btn-success" value="Predict!">
+            </form>
+        </div>
+    </body>
+</html>
