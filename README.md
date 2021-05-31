@@ -1,5 +1,9 @@
 # Boxoffice Forecaster (Attempt #2)
 
+IMPORTANT NOTE: the jupyter notebook in this repo is an *annotated* notebook. Please refer to the notebook for more background details, such as data preprocessing, EDA, and modeling!
+
+-----------
+
 As I was working on this project earlier, I wondered why the model was *not* performing well. Across different models, there were slight variations in the accuracy, precision, and recall scores, but they were all within the range of 0.5. This was actually a really bad news for as it meant that the model could only predict as well as just randomly guesssing whether or not a movie will be successful. 
 
 There are two speculations that I made for this poor performance:
@@ -52,4 +56,7 @@ ROC Curve:
 
 Compared to our original model before, we can now see a small bump in this graph! This is a good sign since it shows that we can achieve higher True Positive Rate with lower False Positive Rate, and as we have noted, false positive cases are not very good for the purpose of our model. This also shows a significant improvement from our previous model, where our ROC was a straight diagonal line, where the FPR was increasing at the same rate as the TPR. 
 
+## Flask App
 
+With this best model, I created a very simple flask web app to accompany the model.
+Just fill in the required features, and the model will predict the success of the provided movie and give a confidence level for the prediction !
