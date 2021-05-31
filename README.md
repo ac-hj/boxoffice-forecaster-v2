@@ -52,4 +52,7 @@ ROC Curve:
 
 Compared to our original model before, we can now see a small bump in this graph! This is a good sign since it shows that we can achieve higher True Positive Rate with lower False Positive Rate, and as we have noted, false positive cases are not very good for the purpose of our model. This also shows a significant improvement from our previous model, where our ROC was a straight diagonal line, where the FPR was increasing at the same rate as the TPR. 
 
+## Flask App
 
+With this best model, I created a very simple flask web app to accompany the model.
+Just fill in the required features, and the model will predict the success of the provided movie and give a confidence level for the prediction !
