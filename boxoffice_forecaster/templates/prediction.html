@@ -1,5 +1,8 @@
 <html>
-    <body style='height: 100%; display:flex; flex-direction: column; justify-content: center; align-items: center;'>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+    </head>
+    <body style='background-color:#F4F4F2; height: 100%; display:flex; flex-direction: column; justify-content: center; align-items: center;'>
         <h1>Result</h1>
         <h3>{{ success }}</h3>
         <h5>with a {{ confidence }} confidence</h5>
