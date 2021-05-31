@@ -1,5 +1,9 @@
 # Boxoffice Forecaster (Attempt #2)
 
+IMPORTANT NOTE: the jupyter notebook in this repo is an *annotated* notebook. Please refer to the notebook for more background details, such as data preprocessing, EDA, and modeling!
+
+-----------
+
 As I was working on this project earlier, I wondered why the model was *not* performing well. Across different models, there were slight variations in the accuracy, precision, and recall scores, but they were all within the range of 0.5. This was actually a really bad news for as it meant that the model could only predict as well as just randomly guesssing whether or not a movie will be successful. 
 
 There are two speculations that I made for this poor performance:
