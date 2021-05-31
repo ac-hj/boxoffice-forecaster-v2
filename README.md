@@ -59,4 +59,11 @@ Compared to our original model before, we can now see a small bump in this graph
 ## Flask App
 
 With this best model, I created a very simple flask web app to accompany the model.
-Just fill in the required features, and the model will predict the success of the provided movie and give a confidence level for the prediction !
+Just fill in the required features, and the model will predict the success of the provided movie and give a confidence level for the prediction!
+
+<img width="1440" alt="Screen Shot 2021-05-31 at 4 02 32 PM" src="https://user-images.githubusercontent.com/58259611/120247828-b4574d00-c229-11eb-802f-b8cb5f5a4075.png">
+
+<img width="1440" alt="Screen Shot 2021-05-31 at 4 04 23 PM" src="https://user-images.githubusercontent.com/58259611/120247898-f5e7f800-c229-11eb-8e00-a1cf321c2965.png">
+
+
+
