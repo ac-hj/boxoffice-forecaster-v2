@@ -1,4 +1,4 @@
-# Boxoffice Forecaster (Attempt #2)
+# [Boxoffice Forecaster](https://github.com/ac-hj/boxoffice-forecaster) (Attempt #2)
 
 IMPORTANT NOTE: the jupyter notebook in this repo is an *annotated* notebook. Please refer to the notebook for more background details, such as data preprocessing, EDA, and modeling!
 
@@ -31,7 +31,7 @@ With these speculations, I wanted to see if I could improve the model by changin
 
 ## Conclusion
 
-Surprisingly, both resampling and dimesionality reduction *decreased* the performance of the model. Scaling did not produce a signficant change and decreased the accuracy very slightly. Given these, I decided to not do any sampling, scaling, or dimensionality reduction for my final model. Undersampling and no sampling performed similarly, but no sampling had much less false positive cases, which is better in our context. This is because false positive means predicting a movie to be successful when it won't, which could result in an economic loss (like investment). This is more significant than false negatives because false negative means predicting a movie to be not successful when it would be, which would likely result in more regrets than economic loss.
+Surprisingly, both resampling and dimesionality reduction *decreased* the performance of the model. Scaling did not produce a signficant change and decreased the accuracy very slightly. Given these, I decided to not do any sampling, scaling, or dimensionality reduction for my final model. Undersampling and no sampling performed similarly, but no sampling had much less false positive cases, which is better in our context. This is because false positive means predicting a movie to be successful when it won't, which could result in an economic loss (like investment). This is more significant than false negatives because false negative means predicting a movie to be not successful when it would be, which would likely result in more personal regrets than an economic loss.
 
 Following is the result from the improved model, which is all the same as the original model but without sampling, scaling, and dimensionality reduction. 
 
