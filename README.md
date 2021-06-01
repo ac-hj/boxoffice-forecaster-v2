@@ -13,7 +13,7 @@ There are two speculations that I made for this poor performance:
 
 With these speculations, I wanted to see if I could improve the model by changing the sampling methods and not applying PCA. 
 
-## Experiment 🧪
+## Experiment
 
 ### Resampling methods
 1. Undersampling
@@ -29,7 +29,7 @@ With these speculations, I wanted to see if I could improve the model by changin
 
 ** I added additional experiments for scaling as I wanted to see if scaling the numerical columns separately would change anything.
 
-## Conclusion 📊
+## Conclusion
 
 Surprisingly, both resampling and dimesionality reduction *decreased* the performance of the model. Scaling did not produce a signficant change and decreased the accuracy very slightly. Given these, I decided to not do any sampling, scaling, or dimensionality reduction for my final model. Undersampling and no sampling performed similarly, but no sampling had much less false positive cases, which is better in our context. This is because false positive means predicting a movie to be successful when it won't, which could result in an economic loss (like investment). This is more significant than false negatives because false negative means predicting a movie to be not successful when it would be, which would likely result in more regrets than economic loss.
 
