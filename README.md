@@ -61,7 +61,7 @@ Compared to our original model before, we can now see a small bump in this graph
 With this best model, I created a very simple flask web app to accompany the model.
 Just fill in the required features, and the model will predict the success of the provided movie and give a confidence level for the prediction!
 
-To run the app, run `python3 server.py` at the root level of the boxoffice_forecaster folder.
+To run the app, run `python3 server.py` at the first level inside the boxoffice_forecaster directory.
 
 (More style changes are on the way)
 
