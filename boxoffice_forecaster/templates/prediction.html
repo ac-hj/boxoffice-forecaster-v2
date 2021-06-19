@@ -1,8 +1,19 @@
 <html>
     <head>
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+        <script>
+            window.onload=function(){
+                var back = document.querySelector('#back')
+                if(back){
+                    back.addEventListener('click', function(e) {
+                                window.location.href = '../';
+                    }, false);
+                }
+            }
+        </script>
     </head>
     <body style='background-color:#F4F4F2; height: 100%; display:flex; flex-direction: column; justify-content: center; align-items: center;'>
+        <p id="back" style="cursor: pointer;">←</p>
         <h1>Result</h1>
         <h3>{{ success }}</h3>
         <h5>with a {{ confidence }} confidence</h5>

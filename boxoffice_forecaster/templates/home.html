@@ -1,5 +1,7 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Box Office Forecaster</title>
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
     </head>
@@ -10,47 +12,48 @@
                 <div class="form-group">
                   <label for="titleInput">Enter Title: </label>
                   <br>
-                  <input type="text" name="title" autocomplete="off" placeholder="Title">
+                  <input class="form-control" type="text" name="title" autocomplete="off" placeholder="Title">
                 </div>
                 <div class="form-group">
                   <label for="durationInput">Enter Duration (in minutes): </label>
                   <br>
-                  <input type="number" name="duration" autocomplete="off" placeholder="Duration">
+                  <input class="form-control" type="number" name="duration" autocomplete="off" placeholder="Duration">
                 </div>
                 <div class="form-group">
                     <label for="genreInput">Enter Genre(s) (separated by commas): </label>
                     <br>
-                    <input type="text" name="genre" autocomplete="off" placeholder="Genre(s)">
+                    <input class="form-control" type="text" name="genre" autocomplete="off" placeholder="Genre(s)">
                 </div>
                 <div class="form-group">
                     <label for="actorInput">Enter Actor(s) (separated by commas): </label>
                     <br>
-                    <input type="text" name="actor" autocomplete="off" placeholder="Actor(s)">
+                    <input class="form-control" type="text" name="actor" autocomplete="off" placeholder="Actor(s)">
                 </div>
                 <div class="form-group">
                     <label for="directorInput">Enter Director(s) (separated by commas): </label>
                     <br>
-                    <input type="text" name="director" autocomplete="off" placeholder="Director(s)">
+                    <input class="form-control" type="text" name="director" autocomplete="off" placeholder="Director(s)">
                 </div>
                 <div class="form-group">
                     <label for="companyInput">Enter Company(s) (separated by commas): </label>
                     <br>
-                    <input type="text" name="company" autocomplete="off" placeholder="Company">
+                    <input class="form-control" type="text" name="company" autocomplete="off" placeholder="Company">
                 </div>
                 <div class="form-group">
                     <label for="dateInput">Published Date: </label>
                     <br>
-                    <input type="date" name="date" autocomplete="off" placeholder="Date">
+                    <input class="form-control" type="date" name="date" autocomplete="off" placeholder="Date">
                 </div>
                 <div class="form-group">
                     <label for="descInput">Description: </label>
                     <br>
-                    <input type="text" name="desc" autocomplete="off" placeholder="Description">
+                    <input class="form-control" type="text" name="desc" autocomplete="off" placeholder="Description">
                 </div>
                 <div class="form-group">
                     <label for="contInput">Continent: </label>
                     <br>
-                    <select name="continent" autocomplete="off" placeholder="Continent">
+                    <select class="form-select" aria-label="Default select example" name="continent" autocomplete="off" placeholder="Continent">
+                        <option selected>Open this continent menu</option>
                         <option>Africa</option>
                         <option>Asia</option>
                         <option>Australia</option>
