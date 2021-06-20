@@ -2,29 +2,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 form {
     /* display: flex; 
     flex-direction: row;
     flex-wrap: wrap; */
-    width: 20vw;
   }
 
 /* input, select {
     display: block;
 } */
 
-.form-group {
+.fg {
     margin-bottom: 10px;
+    margin-left: 2vw;
 }
 
 h1 {
     text-align: center;
     font-family: 'Limelight', cursive;
+    background-color: #A3E4D7;
+    padding: 2vw;
+    border-radius: 30px;
+    width: 35vw;
+}
+
+.box {
+    background-color: #FEDC6D;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 35vw;
+    padding-right: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    border-radius: 30px;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+}
+
+#predict {
+    margin-left: 2vw;
 }
