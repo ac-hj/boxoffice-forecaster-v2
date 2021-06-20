@@ -65,9 +65,9 @@ To run the app, run `python3 server.py` at the first level inside the boxoffice_
 
 (More style changes are on the way)
 
-<img width="1440" alt="Screen Shot 2021-05-31 at 4 02 32 PM" src="https://user-images.githubusercontent.com/58259611/120247828-b4574d00-c229-11eb-802f-b8cb5f5a4075.png">
+<img width="1440" alt="Screen Shot 2021-06-20 at 12 19 39 PM" src="https://user-images.githubusercontent.com/58259611/122685757-38b24580-d1c2-11eb-8068-2e1f36c18e06.png">
 
-<img width="1440" alt="Screen Shot 2021-05-31 at 4 04 23 PM" src="https://user-images.githubusercontent.com/58259611/120247898-f5e7f800-c229-11eb-8e00-a1cf321c2965.png">
+<img width="1440" alt="Screen Shot 2021-06-20 at 12 22 15 PM" src="https://user-images.githubusercontent.com/58259611/122685768-48ca2500-d1c2-11eb-9bcc-0cc46a4d896a.png">
 
 
 
