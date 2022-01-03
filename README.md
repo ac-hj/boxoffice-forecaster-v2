@@ -1,4 +1,6 @@
-# [Boxoffice Forecaster](https://github.com/ac-hj/boxoffice-forecaster) (Attempt #2)
+# [Box Office Forecaster](https://github.com/ac-hj/boxoffice-forecaster) (Attempt #2)
+
+![IMG_3931](https://user-images.githubusercontent.com/58259611/147989974-d6c1230d-f152-4c15-b838-4f964640375d.png)
 
 IMPORTANT NOTE: the jupyter notebook in this repo is an *annotated* notebook. Please refer to the notebook for more background details, such as data preprocessing, EDA, and modeling!
 
